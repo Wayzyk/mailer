@@ -1,24 +1,15 @@
-# README
+Setup project:
+- git clone
+- bundle install
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create user:
+- rails c
+- FactoryBot.create(:user)
 
-Things you may want to cover:
+Send email:
+user = User.last/ User.first/ User.find :id
+#Testmail
+- SendEmailMailer.send_email(user).deliver
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#GreetingMail
+- SendEmailMailer.greeting_email(user).deliver
