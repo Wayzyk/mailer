@@ -17,5 +17,5 @@ user = User.last/ User.first/ User.find :id
 Send sms:
 
 #for sending sms you should create trial account on twilio and puts values
-# to credentials.yml. In console paste this code 'cp credentials.yml.enc credentials.yml ' 
+#to credentials.yml. In console paste this code 'cp credentials.yml.enc credentials.yml ' 
 - TwilioClient.new.send_text(user, 'your message')
